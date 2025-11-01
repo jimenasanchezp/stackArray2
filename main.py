@@ -14,10 +14,11 @@ def main():
         print("3. Peek (Ver contacto en la cima)")
         print("4. Contains (Buscar contacto por ID)")
         print("5. Clear (Vaciar pila)")
-        print("6. Salir")
+        print("6. Count (Contar contactos en la pila)")
+        print("7. Salir")
         print("------------------------")
             
-        # lee la opción del usuario
+         # lee la opción del usuario
         try:
             opcion = int(input("Seleccione una opción (1-6): "))
         except ValueError:
@@ -82,11 +83,18 @@ def main():
             pila.show_list()
 
         elif opcion == 6:
-            print("Saliendo del programa...")
+            if pila.is_empty():
+                print("La pila está vacía.")
+            print(f"Total de elementos en la pila: '{pila.count()}'")
+            pila.show_list()
+            
+        
+        elif opcion == 7:
+            print(f"Saliendo del programa." )
             break
 
         else:
-            print("Opción no válida. Por favor, seleccione 1, 2, 3, 4, 5 o 6.")
+            print("Opción no válida. Por favor, seleccione 1, 2, 3, 4, 5, 6 o 7.")
 
 if __name__ == "__main__":
     main()

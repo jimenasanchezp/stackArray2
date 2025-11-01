@@ -54,6 +54,19 @@ class Pila:
             if nodo.id == id_a_buscar:
                 return True
         return False
+    
+    # método para contar los nodos en la pila
+    def count (self):
+        return len(self.array)
+
+    # método para buscar un nodo por su ID
+    def contains(self, id_a_buscar):
+        # recorre los nodos en la pila
+        for nodo in self.array:
+            # compara el ID del nodo con el ID buscado
+            if nodo.id == id_a_buscar:
+                return True
+        return False
 
     # método para mostrar el contenido de la pila
     def show_list(self):
